@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:effects="clr-namespace:DrApp.Effects"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="DrApp.Views.LoginPage">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout Padding="50,15">
+        <Image Source="dr_app_logo.png"
+               WidthRequest="100" />
+        <Label Text="Login"
+               Style="{StaticResource Title}"/>
+        <Label Text="Welcome back"
+               Style="{StaticResource Subtitle}"/>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="email_icon.png" />
+            <Entry Placeholder="Email"
+                   Style="{StaticResource EntryStyle}">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="password_icon.png" />
+            <Entry Placeholder="Password"
+                   Style="{StaticResource EntryStyle}"
+                   IsPassword="True">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Button Text="Forgot Password?"
+                TextTransform="None"
+                BackgroundColor="Transparent"
+                TextColor="DarkGray"
+                FontSize="Caption"
+                HorizontalOptions="End" />
+        <Frame Style="{StaticResource ButtonDropShadowFrame}">
+          <Button Text="Login"
+                  Style="{StaticResource MainButtonStyle}" />
+        </Frame>
+
+        <StackLayout Orientation="Horizontal"
+                     Margin="0,5"
+                     HorizontalOptions="Center">
+          <Button Text="f"
+                  Style="{StaticResource SocialButtonStyle}"
+                  BackgroundColor="{StaticResource Facebook}" />
+          <Button Text="G"
+                  Style="{StaticResource SocialButtonStyle}"
+                  BackgroundColor="{StaticResource Google}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+          <Label Text="Don't have an account?"
+                 VerticalOptions="Center" />
+          <Button Text="Register"
+                  Style="{StaticResource SecondaryButton}" />
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="DrApp.Views.GetStartedPage">
+  <ContentPage.Content>
+    <AbsoluteLayout>
+        <Image Source="clinicbackgroundsplashscreen"
+               AbsoluteLayout.LayoutFlags="SizeProportional"
+               AbsoluteLayout.LayoutBounds="0,0,1,1"
+               Aspect="AspectFill"
+               HeightRequest="300" />
+
+        <BoxView BackgroundColor="White"
+                 AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0,1,1,0.49" />
+        
+        <Image Source="dr_cartoon_1.png"
+               Aspect="AspectFit"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0,0.1,1,0.55"
+               Margin="0,0,0,0" />
+
+      <Grid AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,0.49"
+            Padding="15">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="dr_app_logo.png"
+               Grid.Row="0" />
+        <Frame Grid.Row="1"
+               Style="{StaticResource ButtonDropShadowFrame}">
+          <Button Text="Get Started"
+                  Padding="40,10"
+                  Style="{StaticResource MainButtonStyle}" />
+        </Frame>
+      </Grid>
+
+    </AbsoluteLayout>
+      
+      
+      
+      
+  </ContentPage.Content>
+</ContentPage>

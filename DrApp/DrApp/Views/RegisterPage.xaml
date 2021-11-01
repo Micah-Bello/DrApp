@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:DrApp.Effects"
+             Shell.NavBarIsVisible="False"
+             x:Class="DrApp.Views.RegisterPage">
+    <ContentPage.Content>
+    <ScrollView>
+      <StackLayout Padding="50,15">
+        <Image Source="dr_app_logo.png"
+               WidthRequest="100" />
+        <Label Text="Register"
+               Style="{StaticResource Title}"/>
+        <Label Text="Create Account"
+               Style="{StaticResource Subtitle}"/>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="user_icon.png" />
+            <Entry Placeholder="User Name"
+                   Style="{StaticResource EntryStyle}">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="user_icon.png" />
+            <Entry Placeholder="Full Name"
+                   Style="{StaticResource EntryStyle}">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="email_icon.png" />
+            <Entry Placeholder="Email"
+                   Style="{StaticResource EntryStyle}">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="password_icon.png" />
+            <Entry Placeholder="Password"
+                   Style="{StaticResource EntryStyle}"
+                   IsPassword="True">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource EntryRoundedCornerFrame}">
+          <StackLayout Orientation="Horizontal">
+            <Image Style="{StaticResource EntryIcon}"
+                   Source="password_icon.png" />
+            <Entry Placeholder="Confirm Password"
+                   Style="{StaticResource EntryStyle}"
+                   IsPassword="True">
+              <Entry.Effects>
+                <effects:PlainEntry />
+              </Entry.Effects>
+            </Entry>
+          </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource ButtonDropShadowFrame}">
+          <Button Text="Register"
+                  Style="{StaticResource MainButtonStyle}" />
+        </Frame>
+        <StackLayout Orientation="Horizontal"
+                     Margin="0,5"
+                     HorizontalOptions="Center">
+          <Button Text="f"
+                  Style="{StaticResource SocialButtonStyle}"
+                  BackgroundColor="{StaticResource Facebook}" />
+          <Button Text="G"
+                  Style="{StaticResource SocialButtonStyle}"
+                  BackgroundColor="{StaticResource Google}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+          <Label Text="Already have an account?"
+                 VerticalOptions="Center" />
+          <Button Text="Login"
+                  Style="{StaticResource SecondaryButton}" />
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

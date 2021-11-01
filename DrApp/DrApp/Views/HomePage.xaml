@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             xmlns:effects="clr-namespace:DrApp.Effects"
+             x:Class="DrApp.Views.HomePage">
+    <ContentPage.Content>
+        <Grid Padding="15,10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Image Source="hamburger_menu_icon.png"
+             HorizontalOptions="Start"/>
+      <Image Source="dr_app_logo.png"
+             HorizontalOptions="CenterAndExpand"
+             WidthRequest="60" />
+
+      <Frame Grid.Row="1"
+             Style="{StaticResource EntryRoundedCornerFrame}"
+             Padding="2,0" CornerRadius="16" >
+        <StackLayout Orientation="Horizontal">
+          <Image Style="{StaticResource EntryIcon}"
+                 Source="search_icon.png" />
+          <Entry Placeholder="Search Body Region ID..."
+                 FontSize="12"
+                 Style="{StaticResource EntryStyle}">
+            <Entry.Effects>
+              <effects:PlainEntry />
+            </Entry.Effects>
+          </Entry>
+          <Image Style="{StaticResource EntryIcon}"
+                 Source="filters_icon.png" />
+        </StackLayout>
+      </Frame>
+
+      <AbsoluteLayout Grid.Row="2">
+
+        <Frame BackgroundColor="{StaticResource CardBackground}"
+               HasShadow="False"
+               Padding="12,8"
+               CornerRadius="5"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="1,1,0.87,0.85">
+          <Label Text="Hey there! I am your personal doctor and more like your friend who will be helping you to diagnose your medical issues..."
+                 FontSize="Caption" TextColor="Black"/>
+        </Frame>
+        <Image Source="dr_cartoon_2.png" />
+      </AbsoluteLayout>
+
+      <StackLayout Grid.Row="3">
+        <Label Text="Your Body Part (Front)"
+               Style="{StaticResource Subtitle}" 
+               TextColor="{StaticResource Primary}"/>
+
+        <Image Source="human_body_front.png" 
+               HeightRequest="300"
+               Aspect="AspectFit" />
+      </StackLayout>
+
+          
+      
+
+      <Frame Grid.Row="4" CornerRadius="10" Style="{StaticResource ButtonDropShadowFrame}">
+        <Button Text="Back Part"
+                Style="{StaticResource MainButtonStyleSmall}" />
+      </Frame>
+
+    </Grid>
+    </ContentPage.Content>
+</ContentPage>
