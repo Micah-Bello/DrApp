@@ -9,13 +9,17 @@
              x:Class="DrApp.Views.LoginPage">
   <ContentPage.Content>
     <ScrollView>
-      <StackLayout Padding="50,15">
+      <StackLayout Padding="50,15" VerticalOptions="Center">
+        
         <Image Source="dr_app_logo.png"
                WidthRequest="100" />
+        
         <Label Text="Login"
                Style="{StaticResource Title}"/>
+        
         <Label Text="Welcome back"
                Style="{StaticResource Subtitle}"/>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -28,6 +32,7 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -41,12 +46,14 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Button Text="Forgot Password?"
                 TextTransform="None"
                 BackgroundColor="Transparent"
                 TextColor="DarkGray"
                 FontSize="Caption"
                 HorizontalOptions="End" />
+        
         <Frame Style="{StaticResource ButtonDropShadowFrame}">
           <Button Text="Login"
                   Style="{StaticResource MainButtonStyle}" />
@@ -55,13 +62,10 @@
         <StackLayout Orientation="Horizontal"
                      Margin="0,5"
                      HorizontalOptions="Center">
-          <Button Text="f"
-                  Style="{StaticResource SocialButtonStyle}"
-                  BackgroundColor="{StaticResource Facebook}" />
-          <Button Text="G"
-                  Style="{StaticResource SocialButtonStyle}"
-                  BackgroundColor="{StaticResource Google}" />
+          <ImageButton Source="facebook_icon.png" />
+          <ImageButton Source="google_icon.png" />
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center">
           <Label Text="Don't have an account?"
@@ -69,6 +73,7 @@
           <Button Text="Register"
                   Style="{StaticResource SecondaryButton}" />
         </StackLayout>
+        
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

@@ -13,6 +13,7 @@
       <Color x:Key="Google">#D6281D</Color>
       <Color x:Key="TextEntryBackground">#FAFAFA</Color>
       <Color x:Key="CardBackground">#EAF6FC</Color>
+      <Color x:Key="InfoCardTitleBackground">#D6281D</Color>
       
 
       <Style TargetType="Button" x:Key="MainButtonStyle">
@@ -104,8 +105,7 @@
         <Setter Property="HasShadow"
                 Value="False" />
         <Setter Property="BorderColor"
-                Value="#F0F0F0"/>
-        
+                Value="#F0F0F0" />
         <Setter Property="Margin"
                 Value="5,2" />
         <Setter Property="BackgroundColor"

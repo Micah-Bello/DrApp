@@ -4,15 +4,20 @@
              xmlns:effects="clr-namespace:DrApp.Effects"
              Shell.NavBarIsVisible="False"
              x:Class="DrApp.Views.RegisterPage">
-    <ContentPage.Content>
+  <ContentPage.Content>
     <ScrollView>
-      <StackLayout Padding="50,15">
+      <StackLayout Padding="50,15"
+                   VerticalOptions="Center">
+        
         <Image Source="dr_app_logo.png"
                WidthRequest="100" />
+        
         <Label Text="Register"
-               Style="{StaticResource Title}"/>
+               Style="{StaticResource Title}" />
+        
         <Label Text="Create Account"
-               Style="{StaticResource Subtitle}"/>
+               Style="{StaticResource Subtitle}" />
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -25,6 +30,7 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -37,6 +43,7 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -49,6 +56,7 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -62,6 +70,7 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource EntryRoundedCornerFrame}">
           <StackLayout Orientation="Horizontal">
             <Image Style="{StaticResource EntryIcon}"
@@ -75,20 +84,19 @@
             </Entry>
           </StackLayout>
         </Frame>
+        
         <Frame Style="{StaticResource ButtonDropShadowFrame}">
           <Button Text="Register"
                   Style="{StaticResource MainButtonStyle}" />
         </Frame>
+        
         <StackLayout Orientation="Horizontal"
                      Margin="0,5"
                      HorizontalOptions="Center">
-          <Button Text="f"
-                  Style="{StaticResource SocialButtonStyle}"
-                  BackgroundColor="{StaticResource Facebook}" />
-          <Button Text="G"
-                  Style="{StaticResource SocialButtonStyle}"
-                  BackgroundColor="{StaticResource Google}" />
+          <ImageButton Source="facebook_icon.png" />
+          <ImageButton Source="google_icon.png" />
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center">
           <Label Text="Already have an account?"
@@ -96,6 +104,7 @@
           <Button Text="Login"
                   Style="{StaticResource SecondaryButton}" />
         </StackLayout>
+        
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

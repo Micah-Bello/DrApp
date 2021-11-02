@@ -4,24 +4,31 @@
              xmlns:effects="clr-namespace:DrApp.Effects"
              Shell.NavBarIsVisible="False"
              x:Class="DrApp.Views.QueryPage">
-    <ContentPage.Content>
+  <ContentPage.Content>
     <Grid Padding="15,10">
+      
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
+        <RowDefinition Height="4*" />
+        <RowDefinition Height="2*" />
         <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
 
-      <Image Source="hamburger_menu_icon.png"
-             HorizontalOptions="Start" />
+      <ImageButton BackgroundColor="Transparent"
+                   Source="hamburger_menu_icon.png"
+                   HorizontalOptions="Start" />
+      
       <Image Source="dr_app_logo.png"
              HorizontalOptions="CenterAndExpand"
              WidthRequest="60" />
-      <Frame CornerRadius="10" VerticalOptions="Center" HorizontalOptions="End"
+      
+      <Frame CornerRadius="10"
+             VerticalOptions="Center"
+             HorizontalOptions="End"
              Style="{StaticResource ButtonDropShadowFrame}">
-        <Button Text="Back" TextTransform="None"
+        <Button Text="Back"
+                TextTransform="None"
                 Style="{StaticResource MainButtonStyleSmall}" />
       </Frame>
 
@@ -39,36 +46,47 @@
               <effects:PlainEntry />
             </Entry.Effects>
           </Entry>
-          <Image Style="{StaticResource EntryIcon}"
-                 Source="filters_icon.png" />
+          <ImageButton BackgroundColor="Transparent"
+                       Margin="10"
+                       Source="filters_icon.png" />
         </StackLayout>
       </Frame>
 
-      <AbsoluteLayout Grid.Row="2">
-        <Image Source="dr_cartoon_3.png" 
-               AbsoluteLayout.LayoutFlags="All"
-               AbsoluteLayout.LayoutBounds="0,0,1,1"/>
-        <Frame BackgroundColor="{StaticResource CardBackground}"
-               HasShadow="False"
-               Padding="12,8"
-               CornerRadius="15"
-               AbsoluteLayout.LayoutFlags="All"
-               AbsoluteLayout.LayoutBounds="0.45,0.5,0.5,0.35">
-          <Label Text="Are your bowel motions loose and runny and more frequent than usual?"
-                 HorizontalTextAlignment="Center"
-                 VerticalOptions="Center"
-                 FontSize="Caption"
-                 TextColor="Black" />
-        </Frame>
-      </AbsoluteLayout>
+      <Grid Grid.Row="2"
+            Margin="20"
+            BackgroundColor="Transparent">
+        <Image Source="dr_cartoon_3.png"
+               x:Name="image"
+               HorizontalOptions="Center" />
+        <AbsoluteLayout BindingContext="{x:Reference image}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        HeightRequest="{Binding Height}"
+                        WidthRequest="{Binding Width}">
+          <Frame BackgroundColor="{StaticResource CardBackground}"
+                 AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0.42,0.55,0.64,0.4"
+                 HasShadow="False"
+                 Padding="5"
+                 CornerRadius="15">
+            <Label Text="Are your bowel motions loose and runny and more frequent than usual?"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   FontSize="Caption"
+                   TextColor="Black" />
+          </Frame>
+        </AbsoluteLayout>
+      </Grid>
 
       <StackLayout Orientation="Horizontal"
                    Grid.Row="3"
                    Margin="20"
                    Spacing="60"
                    HorizontalOptions="Center">
-        <Image Source="yes_button.png" />
-        <Image Source="no_button.png" />
+        <ImageButton BackgroundColor="Transparent"
+                     Source="yes_button.png" />
+        <ImageButton BackgroundColor="Transparent"
+                     Source="no_button.png" />
       </StackLayout>
 
       <Frame Grid.Row="4"
@@ -79,5 +97,5 @@
       </Frame>
 
     </Grid>
-    </ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>
